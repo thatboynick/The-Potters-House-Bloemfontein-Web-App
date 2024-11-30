@@ -1,0 +1,1208 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+/*Layout Page*/
+header {
+    position: relative;
+    height: 300px; /* Adjust height as needed */
+    color: white;
+}
+
+.header-background {
+    background-image: url('../images/church desktop logo.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}
+
+.header-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.website-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.website-header-image img {
+    width: 500px;
+    margin-left: 50px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.website-header-links a {
+    font-size: 20px;
+    margin-right: 60px;
+    text-decoration: none;
+    color: white;
+}
+
+.website-header-links a:hover, .website-header-links a.active {
+    color: #b7975b;
+    text-decoration: underline;
+}
+
+.sidebar-drawer {
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url('../images/church desktop logo.png');
+    overflow: hidden;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-drawer.open {
+    width: 500px;
+}
+
+.events-sidebar-drawer {
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url('../images/events.png');
+    overflow: hidden;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.events-sidebar-drawer.open {
+    width: 500px;
+}
+
+.ministries-sidebar-drawer {
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url('../images/ministries.png');
+    overflow: hidden;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.ministries-sidebar-drawer.open {
+    width: 500px;
+}
+
+.giving-sidebar-drawer {
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url('../images/giving.png');
+    overflow: hidden;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.giving-sidebar-drawer.open {
+    width: 500px;
+}
+
+.sidebar-drawer-links img {
+    width: 150px;
+}
+
+.sidebar-drawer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.sidebar-drawer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.sidebar-drawer-links a:hover {
+    color: #b7975b;
+    text-decoration: underline;
+}
+
+footer {
+    position: relative;
+    height: 300px; /* Adjust height as needed */
+    color: white;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    text-align: center;
+}
+
+.footer-background {
+    background-image: url('../images/church desktop logo.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: top; /* Adjusts to keep the image centered */
+    height: 100%;
+    position: relative;
+}
+
+.footer-overlay {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.website-footer {
+    padding: 15px;
+}
+
+.website-footer p,.website-footer a {
+    font-size: 20px;
+    color: white;
+}
+
+.website-footer a:hover, .website-footer a.active {
+    color: #b7975b;
+    text-decoration: underline;
+}
+
+/* Giving Layout */
+.giving-header-background {
+    background-image: url('../images/giving.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}
+
+.giving-header-overlay {
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.giving-footer-background {
+    background-image: url('../images/giving.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: top; /* Adjusts to keep the image centered */
+    height: 100%;
+    position: relative;
+}
+
+.giving-footer-overlay {
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Events Layout */
+.events-header-background {
+    background-image: url('../images/events.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}
+
+.events-header-overlay {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.events-footer-background {
+    background-image: url('../images/events.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: top; /* Adjusts to keep the image centered */
+    height: 100%;
+    position: relative;
+}
+
+.events-footer-overlay {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Ministries Layout */
+.ministries-header-background {
+    background-image: url('../images/ministries.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}
+
+.ministries-header-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ministries-footer-background {
+    background-image: url('../images/ministries.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: top; /* Adjusts to keep the image centered */
+    height: 100%;
+    position: relative;
+}
+
+.ministries-footer-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Scroll Button */
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#scrollTopBtn:hover {
+    background-color: #333;
+}
+
+
+/* Body */
+.body-padding {
+    padding: 50px 0;
+}
+
+/* Index Page */
+.our-services-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.our-services-body {
+    color: #093d68;
+    font-size: 60px;
+    padding: 30px;
+}
+
+.map-text-title {
+    color: #8e8f93;
+    font-size: 60px;
+    font-weight: 800;
+    padding-bottom: 30px;
+}
+
+#map {
+    height: 400px; /* Adjust height as needed */
+    width: 100%;
+}
+
+.map-padding {
+    padding: 30px 0 50px 0;
+}
+
+.prayer-text-title {
+    color: #8e8f93;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.index-pictures {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 50px 60px 50px;
+}
+
+.main-index-pictures {
+    padding: 4px;
+}
+
+.index-pictures-content img {
+    width: 702px;
+    filter: contrast(1.1) brightness(0.9);
+}
+
+/* About Us */
+.our-leadership-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.leadership1 {
+    padding-top: 20px;
+}
+
+.leadership2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 20px;
+}
+
+.main-leadership1, .main-leadership2 {
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.main-leadership1:hover, .main-leadership2:hover {
+    transform: scale(1.1);
+}
+
+.leadership1-content img, .leadership1-content img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.leadership1-content-name {
+    padding-top: 20px;
+    color: #093d68;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.leadership1-content-church {
+    color: #093d68;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.main-what-we-belive {
+    padding: 40px;
+    background-color: #ebebeb;
+}
+
+.what-we-belive-content-title {
+    color: #b7975b;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.what-we-belive-content-body {
+    color: #8e8f93;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.our-vision-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.visions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    padding-top: 20px;
+}
+
+.main-visions {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.main-visions:hover {
+    transform: scale(1.1);
+}
+
+.vision-content img {
+    width: 100px;
+}
+
+.vision-content-title {
+    color: #093d68;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.vision-content-body {
+    color: #8e8f93;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* Events */
+.our-events-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.events {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding-top: 20px;
+}
+
+.main-events {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.main-events:hover {
+    transform: scale(1.1);
+}
+
+.events-content img {
+    width: 600px;
+}
+
+.events-content-title {
+    color: #c3b498;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 20px;
+}
+
+.events-content-body {
+    color: #8e8f93;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Ministries Page */
+.our-ministries-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.our-ministries-body {
+    color: #093d68;
+    font-size: 60px;
+    padding: 30px;
+}
+
+.ministries {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding-top: 20px;
+}
+
+.main-ministries {
+    padding: 20px;
+    width: 100%;
+    height: 500px; /* Set a fixed height for consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+    overflow: hidden; /* Hide any overflow */
+}
+
+.main-ministries:hover {
+    transform: scale(0.9);
+}
+
+.ministries-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ministries-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    display: block;
+}
+
+.ministries-content-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    transition: background-color 0.3s;
+}
+
+.ministries-content-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #b7975b;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 50px; /* Set padding to keep it uniform */
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    z-index: 1;
+    transition: transform 0.3s, padding 0.3s;
+}
+
+.ministries-content-text-overlay a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.ministries-content:hover .ministries-content-text-overlay {
+    transform: translate(-50%, -50%) scale(0.9);
+    padding: 40px; /* Adjust padding to make it slightly smaller on hover */
+}
+
+/* Homecell */
+.our-homecells-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.our-homecells-body {
+    color: #093d68;
+    font-size: 60px;
+    padding: 30px;
+}
+
+.homecells {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    padding-top: 20px;
+}
+
+.main-homecells {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.main-homecells:hover {
+    transform: scale(1.1);
+}
+
+.homecells-content img {
+    width: 400px;
+}
+
+/* Praise & Worship Page*/
+.our-band-pratice-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.our-band-pratice-body {
+    color: #093d68;
+    font-size: 40px;
+}
+
+.band-pratice {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.main-band-pratice {
+    padding: 20px;
+}
+
+.band-pratice-content img {
+    width: 1000px;
+}
+
+/* Sound & Media Page */
+.our-ushers-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.our-ushers-body {
+    color: #093d68;
+    font-size: 40px;
+}
+
+.ushers {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.main-ushers {
+    padding: 20px;
+}
+
+.ushers-content img {
+    width: 1000px;
+}
+
+/* Sound & Media Page */
+.our-sound-and-media-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.our-sound-and-media-body {
+    color: #093d68;
+    font-size: 40px;
+}
+
+.sound-and-media {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.main-sound-and-media {
+    padding: 20px;
+}
+
+.sound-and-media-content img {
+    width: 1000px;
+}
+
+/* Sunday School Page */
+.our-sunday-school-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.our-sunday-school-body {
+    color: #093d68;
+    font-size: 40px;
+}
+
+.sunday-school {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.main-sunday-school {
+    padding: 20px;
+}
+
+.sunday-school-content img {
+    width: 1000px;
+}
+
+/* Outreach */
+.our-outreach-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.outreach {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding-top: 20px;
+}
+
+.main-outreach {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s;
+}
+
+.main-outreach:hover {
+    transform: scale(1.1);
+}
+
+.outreach-content img {
+    width: 600px;
+}
+
+.outreach-content-title {
+    color: #c3b498;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 20px;
+}
+
+.outreach-content-body {
+    color: #8e8f93;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.outreach-note {
+    padding-top: 20px;
+    color: #8e8f93;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.outreach-note a {
+    text-decoration: none;
+    color: #c3b498;
+}
+
+/* Giving Page */
+.our-giving-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.our-giving-body {
+    color: #8e8f93;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.giving {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.main-giving {
+    padding: 20px;
+}
+
+.giving-content img {
+    width: 1000px;
+}
+
+/* Contact Us */
+.our-contact-us-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.contact-leadership1 {
+    padding-top: 20px;
+}
+
+.main-contact-leadership1 {
+    padding: 10px;
+}
+
+.contact-leadership1-content img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-leadership1-content-name {
+    padding-top: 20px;
+    color: #093d68;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.contact-leadership1-content-details {
+    color: #093d68;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.contact-header {
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    color: white;
+}
+
+.contact-background {
+    background-image: url('../images/pictures 16.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}
+
+.contact-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.whatsapp {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding-top: 20px;
+}
+
+.main-whatsapp {
+    padding: 20px;
+    width: 100%;
+    height: 500px; /* Set a fixed height for consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+    overflow: hidden; /* Hide any overflow */
+}
+
+.main-whatsapp:hover {
+    transform: scale(0.9);
+}
+
+.whatsapp-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.whatsapp-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    display: block;
+}
+
+.whatsapp-content-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    transition: background-color 0.3s;
+}
+
+.whatsapp-content-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #b7975b;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 50px; /* Set padding to keep it uniform */
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    z-index: 1;
+    transition: transform 0.3s, padding 0.3s;
+}
+
+.whatsapp-content-text-overlay a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.whatsapp-content:hover .whatsapp-content-text-overlay {
+    transform: translate(-50%, -50%) scale(0.9);
+    padding: 40px; /* Adjust padding to make it slightly smaller on hover */
+}
+
+/* Church Transport Page */
+.our-church-transport-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.our-church-transport-body {
+    color: #8e8f93;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.our-church-transport-body a {
+    text-decoration: none;
+    color: #c3b498;
+}
+
+.church-transport {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.main-church-transport {
+    padding: 20px;
+}
+
+.church-transport-content img {
+    width: 500px;
+}
+
+/* Church Channel Page */
+.our-church-channel-title {
+    color: #8e8f93;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.our-church-channel-body {
+    color: #8e8f93;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.our-church-channel-body a {
+    text-decoration: none;
+    color: #c3b498;
+}
+
+.church-channel {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.main-church-channel {
+    padding: 20px;
+}
+
+.church-channel-content img {
+    width: 500px;
+}
+
+/*Responsive*/
+@media (max-width:880px) {
+    .website-header-image img {
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    .index-pictures {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        padding: 10px; /* Reduce padding for smaller devices */
+    }
+
+    .index-pictures-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .leadership2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 20px;
+    }
+
+    .leadership1-content img, .leadership1-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .visions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding-top: 20px;
+    }
+
+    .vision-content {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .events {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding-top: 20px;
+    }
+
+    .events-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .ministries {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding-top: 20px;
+    }
+
+    .homecells {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding-top: 20px;
+    }
+
+    .homecells-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .band-pratice-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .ushers-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .sound-and-media-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .sunday-school-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .outreach-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .giving-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .church-transport-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .church-channel-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+    
+}
+
+@media (max-width:500px) {
+    .website-header-image img {
+        width: 200px;
+        margin-left: 50px;
+    }
+
+    .menu-icon {
+        display: block;
+        margin: 0 20px 230px 0;
+    }
+
+    .website-header-links {
+        display: none; /* Hide the header links */
+    }
+
+    .leadership2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 20px;
+    }
+
+    .leadership1-content img, .leadership1-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .visions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding-top: 20px;
+    }
+
+    .vision-content {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .homecells {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding-top: 20px;
+    }
+
+    .homecells-content img {
+        max-width: 100%; /* Images adjust to the container width */
+    }
+
+    .outreach {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding-top: 20px;
+    }
+
+    .whatsapp {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding-top: 20px;
+    }
+}
+
+
