@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/The_Potters_House_Bloemfontein_Web_App.styles.css" asp-append-version="true" />
 
+    <link href="~/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="~/font-awesome/css/all.min.css" rel="stylesheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -22,7 +25,9 @@
                     <div class="website-header-image">
                         <a asp-controller="Home" asp-action="Index"><img src="~/images/WELCOME TO THE POTTERS HOUSE BLOEMFONTEIN.png" /></a>
                     </div>
-                    <div class="menu-icon" onclick="toggleDrawer()">☰</div>
+                    <div class="menu-icon" onclick="toggleDrawer()">
+                        <i class="fas fa-bars"></i>
+                    </div>
                     <div class="website-header-links">
                         <a asp-controller="Home" asp-action="About" onclick="setActive(this)">About Us</a>
                         <a asp-controller="Home" asp-action="Events" onclick="setActive(this)">Events</a>
@@ -69,10 +74,10 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/headerlinksclick.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={Use Your Own Google Maps API Key}&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXoFYbYSw6C1hJOVSiOgHbE9Tb5RwdL_w&callback=initMap" async defer></script>
     <script src="~/js/googlemaps.js"></script>
     <script src="~/js/scrollbutton.js"></script>
-    <script src="~/js/headerdrawer.js"></script>
+    <script src="~/js/drawer.js"></script>
     <script src="~/js/animatedscroll.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

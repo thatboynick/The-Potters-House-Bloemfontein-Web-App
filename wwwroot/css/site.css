@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Poppins", serif;
 }
 
 /* Initial hidden state */
@@ -56,13 +56,6 @@ header {
     margin-left: 50px;
 }
 
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1100;
-}
-
 .website-header-links a {
     font-size: 20px;
     margin-right: 60px;
@@ -89,6 +82,21 @@ header {
 
 .sidebar-drawer.open {
     width: 500px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-icon i {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.menu-icon i.fa-times {
+    transform: rotate(90deg);
 }
 
 .events-sidebar-drawer {
@@ -140,22 +148,22 @@ header {
 }
 
 .sidebar-drawer-links img {
-    width: 150px;
+    width: 180px;
 }
 
 .sidebar-drawer-links {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     height: 100%;
-    padding: 20px;
+    padding: 40px;
 }
 
 .sidebar-drawer-links a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 40px;
     margin: 10px 0;
 }
 
@@ -166,18 +174,18 @@ header {
 
 footer {
     position: relative;
-    height: 300px; /* Adjust height as needed */
+    height: 300px;
     color: white;
     display: flex;
-    align-items: center; /* Vertically centers the content */
-    justify-content: center; /* Horizontally centers the content */
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
 .footer-background {
-    background-image: url('../images/church desktop logo.png'); /* Replace with your image path */
+    background-image: url('../images/church desktop logo.png');
     background-size: cover;
-    background-position: top; /* Adjusts to keep the image centered */
+    background-position: top;
     height: 100%;
     position: relative;
 }
@@ -208,7 +216,7 @@ footer {
 
 /* Giving Layout */
 .giving-header-background {
-    background-image: url('../images/giving.png'); /* Replace with your image path */
+    background-image: url('../images/giving.png');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -225,9 +233,9 @@ footer {
 }
 
 .giving-footer-background {
-    background-image: url('../images/giving.png'); /* Replace with your image path */
+    background-image: url('../images/giving.png');
     background-size: cover;
-    background-position: top; /* Adjusts to keep the image centered */
+    background-position: top;
     height: 100%;
     position: relative;
 }
@@ -244,7 +252,7 @@ footer {
 
 /* Events Layout */
 .events-header-background {
-    background-image: url('../images/events.png'); /* Replace with your image path */
+    background-image: url('../images/events.png');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -261,9 +269,9 @@ footer {
 }
 
 .events-footer-background {
-    background-image: url('../images/events.png'); /* Replace with your image path */
+    background-image: url('../images/events.png');
     background-size: cover;
-    background-position: top; /* Adjusts to keep the image centered */
+    background-position: top;
     height: 100%;
     position: relative;
 }
@@ -280,7 +288,7 @@ footer {
 
 /* Ministries Layout */
 .ministries-header-background {
-    background-image: url('../images/ministries.png'); /* Replace with your image path */
+    background-image: url('../images/ministries.png');
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -297,9 +305,9 @@ footer {
 }
 
 .ministries-footer-background {
-    background-image: url('../images/ministries.png'); /* Replace with your image path */
+    background-image: url('../images/ministries.png');
     background-size: cover;
-    background-position: top; /* Adjusts to keep the image centered */
+    background-position: top;
     height: 100%;
     position: relative;
 }
@@ -400,7 +408,7 @@ footer {
 .map-text-title {
     color: #8e8f93;
     font-size: 60px;
-    font-weight: 800;
+    font-weight: 700;
     padding-bottom: 30px;
 }
 
@@ -416,7 +424,7 @@ footer {
 .prayer-text-title {
     color: #8e8f93;
     font-size: 60px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .index-pictures {
@@ -439,7 +447,7 @@ footer {
 .our-leadership-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .leadership1 {
@@ -472,13 +480,13 @@ footer {
     padding-top: 20px;
     color: #093d68;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .leadership1-content-church {
     color: #093d68;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .main-what-we-belive {
@@ -489,19 +497,19 @@ footer {
 .what-we-belive-content-title {
     color: #b7975b;
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .what-we-belive-content-body {
     color: #8e8f93;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-vision-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .visions {
@@ -534,20 +542,20 @@ footer {
 .vision-content-title {
     color: #093d68;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .vision-content-body {
     color: #8e8f93;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 /* Events */
 .our-events-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .events {
@@ -577,7 +585,7 @@ footer {
 .events-content-title {
     color: #c3b498;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
     padding-top: 20px;
 }
 
@@ -591,7 +599,7 @@ footer {
 .our-ministries-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-ministries-body {
@@ -655,7 +663,7 @@ footer {
     background-color: rgba(255, 255, 255, 0.95);
     color: #b7975b;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     padding: 50px; /* Set padding to keep it uniform */
     text-align: center;
     width: 80%;
@@ -678,7 +686,7 @@ footer {
 .our-homecells-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-homecells-body {
@@ -715,7 +723,7 @@ footer {
 .our-band-pratice-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-band-pratice-body {
@@ -740,7 +748,7 @@ footer {
 .our-ushers-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-ushers-body {
@@ -765,7 +773,7 @@ footer {
 .our-sound-and-media-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-sound-and-media-body {
@@ -790,7 +798,7 @@ footer {
 .our-sunday-school-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-sunday-school-body {
@@ -815,7 +823,7 @@ footer {
 .our-outreach-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .outreach {
@@ -845,7 +853,7 @@ footer {
 .outreach-content-title {
     color: #c3b498;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
     padding-top: 20px;
 }
 
@@ -871,13 +879,13 @@ footer {
 .our-giving-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-giving-body {
     color: #8e8f93;
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .giving {
@@ -897,7 +905,7 @@ footer {
 .our-contact-us-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .contact-leadership1 {
@@ -918,13 +926,13 @@ footer {
     padding-top: 20px;
     color: #093d68;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .contact-leadership1-content-details {
     color: #093d68;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .contact-header {
@@ -949,7 +957,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     font-size: 60px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .whatsapp {
@@ -1007,7 +1015,7 @@ footer {
     background-color: rgba(255, 255, 255, 0.95);
     color: #b7975b;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     padding: 50px; /* Set padding to keep it uniform */
     text-align: center;
     width: 80%;
@@ -1030,13 +1038,13 @@ footer {
 .our-church-transport-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-church-transport-body {
     color: #8e8f93;
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-church-transport-body a {
@@ -1061,13 +1069,13 @@ footer {
 .our-church-channel-title {
     color: #8e8f93;
     font-size: 80px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-church-channel-body {
     color: #8e8f93;
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .our-church-channel-body a {
@@ -1100,7 +1108,13 @@ footer {
         padding: 10px; /* Reduce padding for smaller devices */
     }
 
-    .index-pictures-content img {
+    .index-pictures-content img, .leadership1-content img,
+    .leadership1-content img, .events-content img,
+    .vision-content, .homecells-content img,
+    .band-pratice-content img, .ushers-content img,
+    .sound-and-media-content img, .sunday-school-content img,
+    .outreach-content img, .giving-content img,
+    .church-transport-content img, .church-channel-content img {
         max-width: 100%; /* Images adjust to the container width */
     }
 
@@ -1111,11 +1125,7 @@ footer {
         padding-top: 20px;
     }
 
-    .leadership1-content img, .leadership1-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .visions {
+    .visions, .homecells {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1123,74 +1133,14 @@ footer {
         padding-top: 20px;
     }
 
-    .vision-content {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .events {
+    .events, .ministries, 
+    .whatsapp {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
         padding-top: 20px;
     }
-
-    .events-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .ministries {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding-top: 20px;
-    }
-
-    .homecells {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px;
-        padding-top: 20px;
-    }
-
-    .homecells-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .band-pratice-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .ushers-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .sound-and-media-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .sunday-school-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .outreach-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .giving-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .church-transport-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .church-channel-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-    
 }
 
 @media (max-width:500px) {
@@ -1215,43 +1165,13 @@ footer {
         padding-top: 20px;
     }
 
-    .leadership1-content img, .leadership1-content img {
+    .leadership1-content img, .leadership1-content img, 
+    .vision-content, .homecells-content img {
         max-width: 100%; /* Images adjust to the container width */
     }
 
-    .visions {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding-top: 20px;
-    }
-
-    .vision-content {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
-    .homecells {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding-top: 20px;
-    }
-
-    .homecells-content img {
-        max-width: 100%; /* Images adjust to the container width */
-    }
-
+    .visions, .homecells
     .outreach {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding-top: 20px;
-    }
-
-    .whatsapp {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
